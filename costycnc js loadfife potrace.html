@@ -1,7 +1,8 @@
-<!DOCTYPE html>
-<!-- saved from url=(0035)https://kilobtye.github.io/potrace/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- 
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset='utf-8'>
+ </head>
+ <body>
 <input type='file' accept='image/png, image/jpeg' onchange='openFile(event)'><br>
       <div id="imgdiv"> </div>
       <div> </div>
@@ -25,8 +26,6 @@
 	*/
   };
 
-
-
 function handleFiles(files) {
   Potrace.loadImageFromUrl(files);
   Potrace.process(function(){
@@ -46,11 +45,13 @@ function displayImg(){
 function displaySVG(size, type){
   var svgdiv = document.getElementById('svgdiv');
   svgdiv.style.display = 'inline-block';
-  svgdiv.innerHTML = "<p>Result:</p>" + Potrace.getSVG(1, 1);
+  var svg=Potrace.getSVG(1, 1);
+  svgdiv.innerHTML = "<p>Result:</p>" + svg;
+  console.log(svg);
 }
   function gcode(){
   gcode_value = Potrace.getSVG1(1,1);
-  console.log(gcode_value);
+  //console.log(gcode_value);
 }
 </script>
 
