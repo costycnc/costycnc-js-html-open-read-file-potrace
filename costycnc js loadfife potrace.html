@@ -32,6 +32,7 @@ function handleFiles(files) {
   Potrace.process(function(){
     displayImg();
     displaySVG(1);
+	gcode();
   });
 }
 
@@ -47,9 +48,11 @@ function displaySVG(size, type){
   svgdiv.style.display = 'inline-block';
   svgdiv.innerHTML = "<p>Result:</p>" + Potrace.getSVG(1, 1);
 }
-
+  function gcode(){
+  gcode_value = Potrace.getSVG1(1,1);
+  console.log(gcode_value);
+}
 </script>
 
-  
 
 </body></html>
