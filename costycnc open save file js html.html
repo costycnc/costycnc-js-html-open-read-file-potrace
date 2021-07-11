@@ -7,6 +7,7 @@
     <a href="" id="save">save</a>
 	
 <input type='file' accept='*' onchange='openFile(event)'><br>
+<button onclick="save1()">save1</button>
 
 <script>
 window.onload = function(){
@@ -25,6 +26,13 @@ window.onload = function(){
   }, false); 
 };
 
+function save1(){
+
+    var link = document.createElement("a");
+    link.setAttribute("href", "data:text/plain,aaaaa");
+    link.setAttribute("download", "test.txt");
+    link.click();
+	 }
 
  function openFile(event) {
     console.log("a");
