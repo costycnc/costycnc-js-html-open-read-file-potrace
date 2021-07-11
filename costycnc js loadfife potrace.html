@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://kilobtye.github.io/potrace/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+<input type='file' accept='image/png, image/jpeg' onchange='openFile(event)'><br>
+      <div id="imgdiv"> </div>
+      <div> </div>
+      <div id="svgdiv"> </div>
+
+<script src="potrace.js"></script>
+<script>
+    var openFile = function(event) {
+
+    var reader = new FileReader();
+    reader.onload = function(){
+    handleFiles(reader.result);
+    };
+    reader.readAsDataURL(event.target.files[0]);
+	/*
+	FileReader.readAsArrayBuffer()
+	FileReader.readAsBinaryString()
+	FileReader.readAsDataURL()
+	FileReader.readAsText()
+	*/
+  };
+
+
+
+function handleFiles(files) {
+  Potrace.loadImageFromUrl(files);
+  Potrace.process(function(){
+    displayImg();
+    displaySVG(1);
+  });
+}
+
+function displayImg(){
+  var imgdiv = document.getElementById('imgdiv');
+  imgdiv.style.display = 'inline-block';
+  imgdiv.innerHTML = "<p>Input image:</p>";
+  imgdiv.appendChild(Potrace.img);
+}
+
+function displaySVG(size, type){
+  var svgdiv = document.getElementById('svgdiv');
+  svgdiv.style.display = 'inline-block';
+  svgdiv.innerHTML = "<p>Result:</p>" + Potrace.getSVG(size, type);
+}
+
+</script>
+
+  
+
+</body></html>
