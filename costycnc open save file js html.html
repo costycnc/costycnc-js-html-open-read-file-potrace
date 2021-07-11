@@ -1,0 +1,46 @@
+
+<html>
+<head>
+</head>
+<body>
+
+    <a href="" id="save">save</a>
+	
+<input type='file' accept='*' onchange='openFile(event)'><br>
+
+<script>
+window.onload = function(){
+
+	   document.getElementById("save").addEventListener("click", function (e) {
+	 e.target.download = "test.txt";
+	 
+
+	 e.target.href = "data:text/plain,aaaaa"  ;
+	 //data url
+	 //https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+	 //data:,Hello%2C%20World%21
+	 //data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==
+	 //data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E
+	 //data:text/html,<script>alert('hi');
+  }, false); 
+};
+
+
+ function openFile(event) {
+    console.log("a");
+    var reader = new FileReader();
+    reader.onload = function(){
+    console.log(reader.result);
+    };
+    reader.readAsDataURL(event.target.files[0]);//here many attention because original is loadImageFromFile
+	/*
+	FileReader.readAsArrayBuffer()
+	FileReader.readAsBinaryString()
+	FileReader.readAsDataURL()
+	FileReader.readAsText()
+	*/
+  };
+</script>
+</body>
+</html>
+
