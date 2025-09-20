@@ -1,3 +1,66 @@
+# costycnc-js-html-open-read-file-potrace
+
+![Potrace Logo](https://potrace.sourceforge.net/images/potrace-logo.png)
+
+**JavaScript & HTML Example: Open, Read, and Process Bitmap Files with Potrace**
+
+This project demonstrates how to use JavaScript and HTML to:
+
+- Open and read bitmap files (e.g., BMP, PNG) in the browser
+- Convert the images to base64 format
+- Trace the bitmap to vector paths using the Potrace algorithm
+
+It's an excellent starting point for developers interested in client-side image processing and vectorization.
+
+---
+
+## 🔧 Features
+
+- **Open Files**: Select and read bitmap files directly in the browser using the HTML File API
+- **Base64 Encoding**: Convert image files to base64 strings for easy embedding and processing
+- **Potrace Integration**: Utilize the Potrace JavaScript library to trace bitmap images into smooth, scalable vector paths
+- **SVG Output**: Generate SVG paths that can be rendered or saved for further use
+
+---
+
+## 🛠️ Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/costycnc/costycnc-js-html-open-read-file-potrace.git
+ ```
+Open the index.html file in your web browser
+
+Use the file input to select a bitmap image
+
+The image will be processed, and the resulting SVG path data will be displayed
+
+📂 Project Structure
+
+index.html: Main HTML file containing the user interface and script references
+
+potrace.js: JavaScript file implementing the Potrace algorithm for tracing bitmaps
+
+extract.js: Utility script for extracting and processing image data
+
+loadfile.js: Script for handling file loading and base64 encoding
+
+style.css: Basic styling for the user interface
+
+📄 License
+
+This project is licensed under the MIT License
+
+📚 References
+
+Potrace: https://potrace.sourceforge.net/
+
+Potrace JavaScript Library: https://github.com/casperlamboo/potrace-js
+
+
+
+
 # costycnc-js-readfile-potrace
      Costycnc
      Sample to understand javascript load file in html browser and passed bsed64 image to potrace
