@@ -29,7 +29,8 @@ It's an excellent starting point for developers interested in client-side image 
 
    ```bash
    git clone https://github.com/costycnc/costycnc-js-html-open-read-file-potrace.git
- ```
+   ```
+
 Open the index.html file in your web browser
 
 Use the file input to select a bitmap image
