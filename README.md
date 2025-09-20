@@ -1,7 +1,5 @@
 # costycnc-js-html-open-read-file-potrace
 
-![Potrace Logo](https://potrace.sourceforge.net/images/potrace-logo.png)
-
 **JavaScript & HTML Example: Open, Read, and Process Bitmap Files with Potrace**
 
 This project demonstrates how to use JavaScript and HTML to:
